@@ -1,9 +1,10 @@
 package Family_tree.Human;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human {
+public class Human implements Serializable {
     private long id;
     private String name;
     private Gender gender;

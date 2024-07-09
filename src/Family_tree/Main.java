@@ -3,6 +3,7 @@ package Family_tree;
 import Family_tree.Family_tree.FamilyTree;
 import Family_tree.Human.Gender;
 import Family_tree.Human.Human;
+import Family_tree.Writer.FileHander;
 
 public class Main {
     public static void main(String[] args){
@@ -21,6 +22,14 @@ public class Main {
         tree.add(kira);
         tree.add(sema);
 
-        System.out.println((tree));
+        saveTree(tree);
+    }
+    private static FamilyTree readTree(){
+        FileHander fileHander = new FileHander();
+        return (FamilyTree) fileHander.read();
+    }
+    private static void saveTree(FamilyTree tree){
+        FileHander fileHander = new FileHander();
+        fileHander.save(tree);
     }
 }
