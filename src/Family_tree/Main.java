@@ -9,20 +9,24 @@ public class Main {
     public static void main(String[] args){
         FamilyTree tree  = new FamilyTree();
 
-        Human mira = new Human("Мираслава", Gender.Male);
-        Human mateo = new Human("Матео", Gender.Female);
+        Human mira = new Human("Мираслава", Gender.Male, 2004);
+        Human mateo = new Human("Матео", Gender.Female, 2005);
 
         tree.add(mira);
         tree.add(mateo);
         tree.setWidding(mira, mateo);
 
-        Human kira = new Human("Кира", Gender.Male, mira, mateo);
-        Human sema = new Human("Семен", Gender.Female, mira, mateo);
+        Human kira = new Human("Кира", Gender.Male, 1982, mira, mateo);
+        Human sema = new Human("Семен", Gender.Female, 1978, mira, mateo);
 
         tree.add(kira);
         tree.add(sema);
 
-        saveTree(tree);
+//        saveTree(tree);
+        tree.sortByName();
+        System.out.println(tree);
+        tree.sortByYear();
+        System.out.println(tree);
     }
     private static FamilyTree readTree(){
         FileHander fileHander = new FileHander();

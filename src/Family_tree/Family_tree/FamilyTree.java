@@ -1,9 +1,12 @@
 package Family_tree.Family_tree;
 
 import Family_tree.Human.Human;
+import Family_tree.Human.HumanComporatorByName;
+import Family_tree.Human.HumanComporatorByYear;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class FamilyTree implements Serializable {
@@ -86,6 +89,15 @@ public class FamilyTree implements Serializable {
             sb.append("\n");
         }
         return sb.toString();
+    }
+    public Iterator<Human> iterator(){
+        return new FamilyTreeIterator(humanList);
+    }
+    public void sortByName(){
+        humanList.sort(new HumanComporatorByName());
+    }
+    public void sortByYear(){
+        humanList.sort(new HumanComporatorByYear());
     }
 }
 

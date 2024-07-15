@@ -8,23 +8,26 @@ public class Human implements Serializable {
     private long id;
     private String name;
     private Gender gender;
+    private int yearOfBirth;
     private Human mother;
     private Human father;
     private List<Human> children;
     private Human spouse;
 
-    public Human (String name, Gender gender, Human mother, Human father){
+    public Human (String name, Gender gender, int yearOfBirth, Human mother, Human father){
         id = -1;
         this.name = name;
         this.gender = gender;
+        this.yearOfBirth = yearOfBirth;
         this.mother = mother;
         this.father = father;
         children = new ArrayList<>();
     }
-    public Human (String name, Gender gender){
+    public Human (String name, Gender gender, int yearOfBirth){
         id = -1;
         this.name = name;
         this.gender = gender;
+        this.yearOfBirth = yearOfBirth;
         children = new ArrayList<>();
     }
 
@@ -43,6 +46,11 @@ public class Human implements Serializable {
         }
         return true;
     }
+
+    public int getYearOfBirth() {return yearOfBirth;}
+
+    public void setYearOfBirth(int yearOfBirth) {this.yearOfBirth = yearOfBirth;}
+
     public long getId() {return id;}
 
     public void setId(long id) {this.id = id;}
@@ -137,6 +145,8 @@ public class Human implements Serializable {
         sb.append(name);
         sb.append(", пол: ");
         sb.append(gender);
+        sb.append(", год рождения: ");
+        sb.append(yearOfBirth);
         sb.append(", супруг/а: ");
         sb.append(spouseInfo());
         sb.append(", мать: ");
