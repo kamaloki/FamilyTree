@@ -1,10 +1,12 @@
 package Family_tree.Human;
 
+import Family_tree.Family_tree.ItemFamilyTree;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Serializable {
+public class Human implements ItemFamilyTree<Human> {
     private long id;
     private String name;
     private Gender gender;
