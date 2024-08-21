@@ -1,8 +1,7 @@
 package Family_tree.Family_tree;
 
-import Family_tree.Human.Human;
-import Family_tree.Human.HumanComporatorByName;
-import Family_tree.Human.HumanComporatorByYear;
+import Family_tree.model.Human.HumanComporatorByName;
+import Family_tree.model.Human.HumanComporatorByYear;
 
 import java.io.Serializable;
 import java.util.ArrayList;

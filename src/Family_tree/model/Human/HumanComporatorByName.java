@@ -1,4 +1,4 @@
-package Family_tree.Human;
+package Family_tree.model.Human;
 
 import Family_tree.Family_tree.ItemFamilyTree;
 

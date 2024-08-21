@@ -1,7 +1,5 @@
 package Family_tree.Family_tree;
 
-import Family_tree.Human.Human;
-
 import java.util.Iterator;
 import java.util.List;
 
